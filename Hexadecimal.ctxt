@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Hexadecimal
+comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Hexadecimal.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment1.params=engine
+comment1.target=Hexadecimal(CalcEngine)
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Hexadecimal\n
+comment2.params=
+comment2.target=void\ makeFrameHex()
+comment2.text=private\ void\ addButton(Container\ panel,\ String\ buttonText)\n\ \ \ \ {\n\ \ \ \ \ \ \ \ JButton\ button\ \=\ new\ JButton(buttonText);\n\ \ \ \ \ \ \ \ button.addActionListener(this);\n\ \ \ \ \ \ \ \ panel.add(button);\n}
+comment3.params=event
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment4.params=
+comment4.target=void\ redisplay()
+comment5.params=
+comment5.target=void\ switchCalc()
+numComments=6
