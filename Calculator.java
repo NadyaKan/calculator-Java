@@ -10,6 +10,8 @@ public class Calculator
     private CalcHex engine;
     private Hexadecimal gui;
     
+    //private CalcEngine engine;
+    //private UserInterface gui;
   
 
     /**
@@ -20,6 +22,9 @@ public class Calculator
         engine = new CalcHex();
         gui = new Hexadecimal(engine);
         
+        
+        //engine = new CalcEngine();
+        //gui = new UserInterface(engine);
     }
 
     /**

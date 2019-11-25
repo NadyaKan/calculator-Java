@@ -22,6 +22,8 @@ comment14.text=\n\ Apply\ an\ operator.\n\ @param\ operator\ The\ operator\ to\ 
 comment15.params=
 comment15.target=void\ keySequenceError()
 comment15.text=\n\ Report\ an\ error\ in\ the\ sequence\ of\ keys\ that\ was\ pressed.\n
+comment16.params=toggle
+comment16.target=void\ toggle(boolean)
 comment2.params=
 comment2.target=int\ getDisplayValue()
 comment2.text=\n\ @return\ The\ value\ that\ should\ currently\ be\ displayed\n\ on\ the\ calculator\ display.\n
@@ -44,4 +46,4 @@ comment8.text=\n\ The\ '\='\ button\ was\ pressed.\n
 comment9.params=
 comment9.target=void\ clear()
 comment9.text=\n\ The\ 'C'\ (clear)\ button\ was\ pressed.\n\ Reset\ everything\ to\ a\ starting\ state.\n
-numComments=16
+numComments=17

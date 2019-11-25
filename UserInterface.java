@@ -14,7 +14,7 @@ import javax.swing.border.*;
 public class UserInterface
     implements ActionListener
 {
-    protected CalcEngine calc;
+    protected CalcHex calc;
     protected boolean showingAuthor;
 
     protected JFrame frame;
@@ -28,7 +28,7 @@ public class UserInterface
      * Create a user interface.
      * @param engine The calculator engine.
      */
-    public UserInterface(CalcEngine engine)
+    public UserInterface(CalcHex engine)
     {
         calc = engine;
         showingAuthor = true;
@@ -95,7 +95,7 @@ public class UserInterface
             
             addButton(buttonPanel, "/");
             addButton(buttonPanel, "?");
-            addButton(buttonPanel, "C");
+            addButton(buttonPanel, "c");
             buttonPanel.add(new JLabel(" "));
             
             buttonPanel.add(new JLabel(" "));
@@ -155,7 +155,7 @@ public class UserInterface
         else if(command.equals("=")) {
             calc.equals();
         }
-        else if(command.equals("C")) {
+        else if(command.equals("c")) {
             calc.clear();
         }
         else if(command.equals("?")) {
@@ -167,6 +167,8 @@ public class UserInterface
         else if(command.equals("/")) {
             calc.divide();
         }
+        
+        
          
         
         // else unknown command.

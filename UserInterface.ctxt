@@ -2,7 +2,7 @@
 comment0.target=UserInterface
 comment0.text=\n\ A\ graphical\ user\ interface\ for\ the\ calculator.\ No\ calculation\ is\ being\n\ done\ here.\ This\ class\ is\ responsible\ just\ for\ putting\ up\ the\ display\ on\ \n\ screen.\ It\ then\ refers\ to\ the\ "CalcEngine"\ to\ do\ all\ the\ real\ work.\n\ \n\ @author\ David\ J.\ Barnes\ and\ Michael\ Kolling\n\ @version\ 2008.03.30\n
 comment1.params=engine
-comment1.target=UserInterface(CalcEngine)
+comment1.target=UserInterface(CalcHex)
 comment1.text=\n\ Create\ a\ user\ interface.\n\ @param\ engine\ The\ calculator\ engine.\n
 comment2.params=visible
 comment2.target=void\ setVisible(boolean)

@@ -21,6 +21,10 @@ public class CalcEngine
     protected int displayValue;
     // The value of an existing left operand.
     protected int leftOperand;
+    
+  
+    
+    public boolean isHexadecimal = false;
 
     /**
      * Create a CalcEngine.
@@ -216,4 +220,8 @@ public class CalcEngine
         // Reset everything.
         clear();
     }
+    
+    protected void toggle (boolean toggle){
+    isHexadecimal = toggle;
+    } 
 }
