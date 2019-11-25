@@ -1,7 +1,6 @@
 public class CalcHex extends CalcEngine
 {
-    
-    
+
   public CalcHex (){
     super();
     }
