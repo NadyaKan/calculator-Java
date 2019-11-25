@@ -21,9 +21,6 @@ public class UserInterface
     protected JTextField display;
     protected JLabel status;
     
-    
-    
-
     /**
      * Create a user interface.
      * @param engine The calculator engine.
@@ -45,9 +42,6 @@ public class UserInterface
         frame.setVisible(visible);
         
     }
-    
-    
-
     /**
      * Make the frame for the user interface.
      */
@@ -62,7 +56,6 @@ public class UserInterface
         display = new JTextField();
         contentPane.add(display, BorderLayout.NORTH);
 
-        //JPanel digitsPanel = new JPanel(new GridLayout(4, 3));
         JPanel buttonPanel = new JPanel(new GridLayout(7, 4));
         
             addButton(buttonPanel, "9");
@@ -103,9 +96,8 @@ public class UserInterface
             buttonPanel.add(new JLabel(" "));
             addButton(buttonPanel, "=");
           
-        contentPane.add(buttonPanel, BorderLayout.CENTER);   
-        
-
+         contentPane.add(buttonPanel, BorderLayout.CENTER);   
+    
         //status = new JLabel(calc.getAuthor());
         //contentPane.add(status, BorderLayout.SOUTH);
 
@@ -124,8 +116,6 @@ public class UserInterface
         panel.add(button);
     }
     
-    
-
     /**
      * An interface action has been performed.
      * Find out what it was and handle it.
@@ -169,12 +159,7 @@ public class UserInterface
         else if(command.equals("/")) {
             calc.divide();
         }
-        
-        
-         
-        
-        // else unknown command.
-
+ 
         redisplay();
     }
 
@@ -200,7 +185,5 @@ public class UserInterface
 
         showingAuthor = !showingAuthor;
     }
-    
-    
-    
+
 }
