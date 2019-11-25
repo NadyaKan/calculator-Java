@@ -82,8 +82,6 @@ public class Hexadecimal extends UserInterface
             
         }
         
-         redisplay();
-        
         boolean hex = checkbox.isSelected();
         
         if (hex)
