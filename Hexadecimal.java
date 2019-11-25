@@ -13,7 +13,7 @@ public class Hexadecimal extends UserInterface
 {
     public boolean isHex ;
     protected JPanel hexButtons;
-    //protected JCheckBox checkbox;
+    protected JCheckBox checkbox;
     
     
     public Hexadecimal(CalcHex engine)
@@ -40,7 +40,11 @@ public class Hexadecimal extends UserInterface
             
             JPanel switchButton = new JPanel(new GridLayout(1,1));
            
-           
+            checkbox = new JCheckBox("Switch Calculator", false);
+            checkbox.addActionListener(this);
+            switchButton.add(checkbox);
+
+            contentPane.add(switchButton, BorderLayout.LINE_END);
             contentPane.add(hexButtons, BorderLayout.PAGE_END);
             
             hexButtons.setVisible(false);
