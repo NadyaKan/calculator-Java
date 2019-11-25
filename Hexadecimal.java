@@ -11,38 +11,25 @@ import javax.swing.border.*;
  */
 public class Hexadecimal extends UserInterface
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    //private JPanel hexButtons;
-public boolean isHex ;
-protected JPanel hexButtons;
-protected JCheckBox checkbox;
-    /**
-     * Konstruktor für Objekte der Klasse Hexadecimal
-     */
+    public boolean isHex ;
+    protected JPanel hexButtons;
+    protected JCheckBox checkbox;
+    
     
     public Hexadecimal(CalcHex engine)
-    {
-      super(engine);
-      makeFrameHex();
-    }
+        {
+          super(engine);
+          makeFrameHex();
+        }
     
     
     protected void makeFrameHex()
-    
     {
         
-        
         JPanel contentPane = (JPanel)frame.getContentPane();
-        //contentPane.setLayout(new BorderLayout(8, 8));
-        //contentPane.setBorder(new EmptyBorder( 10, 10, 10, 10));
-
-        
-        //contentPane.add(display, BorderLayout.NORTH);
-
+       
         hexButtons = new JPanel(new GridLayout(1, 6));
         
-            
-            
             addButton(hexButtons, "A");
             addButton(hexButtons, "B");
             addButton(hexButtons, "C");
@@ -51,20 +38,13 @@ protected JCheckBox checkbox;
             addButton(hexButtons, "F");
             
             
-            
             JPanel switchButton = new JPanel(new GridLayout(1,1));
-            
-            
-            //addCheckBox(switchButton,"Switch Calculator", false);
-            
+           
             checkbox = new JCheckBox("Switch Calculator", false);
             checkbox.addActionListener(this);
             switchButton.add(checkbox);
             
-            
-            
             contentPane.add(hexButtons, BorderLayout.PAGE_END);
-            
             contentPane.add(switchButton, BorderLayout.LINE_END);
             
             hexButtons.setVisible(false);
@@ -73,14 +53,11 @@ protected JCheckBox checkbox;
             
     }
     
-    
-    
     public void actionPerformed(ActionEvent event)
     {
         super.actionPerformed(event);
         String command = event.getActionCommand();
-        
-
+     
         if(command.equals("A")){
            calc.numberPressed(10);
         }
@@ -104,38 +81,27 @@ protected JCheckBox checkbox;
            switchCalc();
             
         }
+        
         boolean hex = checkbox.isSelected();
         
-        if (hex){
+        if (hex)
+        {
             redisplay();
-        }else{
+        }
+        else
+        {
           super.redisplay();  
         }
-        
-        
+   
     }
 
   protected void redisplay() {
        
       int value = calc.getDisplayValue();
       String hexValue = Integer.toHexString(value).toUpperCase();
-       display.setText(hexValue);
+      display.setText(hexValue);
     }
-   
-    
-    /*protected void switchCalc(){
-        if(isHex){
-        hexButtons.setVisible(true);
-        isHex= false;
-        }
-        else{
-        hexButtons.setVisible(false);
-        isHex=true;
-        }
-        calc.toggle(isHex);
-    }
-    */
-   
+  
    protected void switchCalc(){
        isHex=checkbox.isSelected();
         if(checkbox.isSelected()){
