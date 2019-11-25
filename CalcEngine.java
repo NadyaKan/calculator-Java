@@ -8,10 +8,7 @@ public class CalcEngine
 {
     // The calculator's state is maintained in three fields:
     //     buildingDisplayValue, haveLeftOperand, and lastOperator.
-    
-    // Are we already building a value in the display, or will the
-    // next digit be the first of a new one?
-    protected boolean buildingDisplayValue;
+   protected boolean buildingDisplayValue;
     // Has a left operand already been entered (or calculated)?
     protected boolean haveLeftOperand;
     // The most recent operator that was entered.
@@ -21,8 +18,6 @@ public class CalcEngine
     protected int displayValue;
     // The value of an existing left operand.
     protected int leftOperand;
-    
-  
     
     public boolean isHexadecimal;
 
@@ -62,17 +57,12 @@ public class CalcEngine
         }
     }
 
-    /**
-     * The 'plus' button was pressed. 
-     */
+   
     public void plus()
     {
         applyOperator('+');
     }
 
-    /**
-     * The 'minus' button was pressed.
-     */
     public void minus()
     {
         applyOperator('-');
