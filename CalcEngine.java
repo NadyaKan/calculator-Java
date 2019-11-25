@@ -24,7 +24,7 @@ public class CalcEngine
     
   
     
-    public boolean isHexadecimal = false;
+    public boolean isHexadecimal;
 
     /**
      * Create a CalcEngine.

@@ -13,8 +13,9 @@ public class Hexadecimal extends UserInterface
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     //private JPanel hexButtons;
-public boolean isHex;
+public boolean isHex ;
 protected JPanel hexButtons;
+protected JCheckBox checkbox;
     /**
      * Konstruktor für Objekte der Klasse Hexadecimal
      */
@@ -51,20 +52,28 @@ protected JPanel hexButtons;
             
             
             
-            JPanel switchButton = new JPanel(new GridLayout(3,1));
-            
-            switchButton.add(new JLabel(" "));
-            addButton(switchButton, "Switch Calculator");
-            switchButton.add(new JLabel(" "));
+            JPanel switchButton = new JPanel(new GridLayout(1,1));
             
             
-            contentPane.add(hexButtons, BorderLayout.SOUTH);
+            //addCheckBox(switchButton,"Switch Calculator", false);
+            
+            checkbox = new JCheckBox("Switch Calculator", false);
+            checkbox.addActionListener(this);
+            switchButton.add(checkbox);
+            
+            
+            
+            contentPane.add(hexButtons, BorderLayout.PAGE_END);
             
             contentPane.add(switchButton, BorderLayout.LINE_END);
+            
+            hexButtons.setVisible(false);
             
             frame.pack();
             
     }
+    
+    
     
     public void actionPerformed(ActionEvent event)
     {
@@ -91,14 +100,19 @@ protected JPanel hexButtons;
             calc.numberPressed(15);
         }
         
-        if(command.equals("Switch Calculator")) {
+        else if(command.equals("Switch Calculator")) {
            switchCalc();
             
         }
+        boolean hex = checkbox.isSelected();
         
-        // else unknown command.
-
-        redisplay();
+        if (hex){
+            redisplay();
+        }else{
+          super.redisplay();  
+        }
+        
+        
     }
 
   protected void redisplay() {
@@ -109,7 +123,7 @@ protected JPanel hexButtons;
     }
    
     
-    protected void switchCalc(){
+    /*protected void switchCalc(){
         if(isHex){
         hexButtons.setVisible(true);
         isHex= false;
@@ -120,5 +134,19 @@ protected JPanel hexButtons;
         }
         calc.toggle(isHex);
     }
-    
+    */
+   
+   protected void switchCalc(){
+       isHex=checkbox.isSelected();
+        if(checkbox.isSelected()){
+        hexButtons.setVisible(true);
+        
+        }
+        else{
+        hexButtons.setVisible(false);
+        
+        }
+        calc.toggle(isHex);
+        
+    }
 }

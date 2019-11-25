@@ -12,4 +12,5 @@ comment4.params=
 comment4.target=void\ redisplay()
 comment5.params=
 comment5.target=void\ switchCalc()
+comment5.text=protected\ void\ switchCalc(){\n\ \ \ \ \ \ \ \ if(isHex){\n\ \ \ \ \ \ \ \ hexButtons.setVisible(true);\n\ \ \ \ \ \ \ \ isHex\=\ false;\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ else{\n\ \ \ \ \ \ \ \ hexButtons.setVisible(false);\n\ \ \ \ \ \ \ \ isHex\=true;\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ calc.toggle(isHex);\n\ \ \ \ }\n
 numComments=6
